@@ -3,20 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GUESS THE NUMBER</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 20px 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+    input {
+        padding: 10px;
+        width: calc(100% - 80px);
+        margin-right: 10px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #2980b9;
+    }
+    .result {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #27ae60;
+        font-weight: bold;
+    }
+</style>
 <body>
-    <div id="step1">
+
+    <div id="step1"class="container">
+       <h3>LEVEL 1</h3>
     <h3>Enter name</h3>
-    <input type="text" id="name">
+    <input type="text" id="name" placeholder="Enter your name" required>
     <button onclick="send()">Submit</button>
 </div>
-    <div id="step2">
+
+    <div id="step2"class="container">
         <h2></h2>
     <h4>Guess the number</h4>
-    <input type="number" id="number">
+    <input type="number" id="number"placeholder="Enter your guess" required>
     <button onclick="guess()">Submit</button>
-    <p id="show"></p>
+    <p id="show" class="result"></p>
+</div>
+
+<div id="step3"class="container">
+    <h3>LEVEL 2</h3>
+ <h3>Enter name</h3>
+ <input type="text" id="name" placeholder="Enter your name" required>
+ <input type="number" id="starting_number"placeholder="Enter starting Number - 5" required>
+ <input type="number" id="ending_number"placeholder="Ending number  - 35" required>
+ <button onclick="check()">Submit</button>
 </div>
 </body>
 <script src="scripts.js"></script>
