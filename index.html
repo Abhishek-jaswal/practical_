@@ -78,11 +78,17 @@
 
 <div id="step3"class="container">
     <h3>LEVEL 2</h3>
- <h3>Enter name</h3>
- <input type="text" id="name" placeholder="Enter your name" required>
- <input type="number" id="starting_number"placeholder="Enter starting Number - 5" required>
- <input type="number" id="ending_number"placeholder="Ending number  - 35" required>
- <button onclick="check()">Submit</button>
+    <input type="text" id="inputname" placeholder="Starting Number">
+    <input type="number" id="starting_number" placeholder="Starting Number">
+    <input type="number" id="ending_number" placeholder="Ending Number">
+    <button onclick="generateRandomNumber()">Generate Number</button>
+</div>
+<div id="step4"class="container">  
+    <input type="number" id="guessnum" placeholder="Your Guess">
+    <button onclick="check()">Check</button>
+    
+    <p id="result"></p>
+    
 </div>
 </body>
 <script src="scripts.js"></script>
